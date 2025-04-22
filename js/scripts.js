@@ -56,3 +56,9 @@ setInterval(() => {
   getClockTime();
   getClockDate();
 }, 1000);
+
+//horas
+//360° ÷ 12 horas = 30° por hora
+//360° ÷ 60 = 6° por minuto
+//6° ÷ 60 = 0.1° por segundo
+
