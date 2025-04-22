@@ -69,7 +69,7 @@ const getAnalogClock = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  const hourDegrees = hours/12 * 30;
+  const hourDegrees = hours * 30;
   const minuteDegrees = minutes * 6;
   const secondDegrees = seconds * 6;
 

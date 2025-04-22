@@ -2,9 +2,9 @@
   --background-color: #000;
   --text-color: #fff;
   --clock-border-color: #333;
-  --deg-rotation-hourse: 180deg;
-  --deg-rotation-minutes: 180deg;
-  --deg-rotation-seconds: 180deg;
+  --deg-rotation-hourse: 0deg;
+  --deg-rotation-minutes: 0deg;
+  --deg-rotation-seconds: 0deg;
   
 }
 
@@ -135,11 +135,11 @@ body {
   top: 130px;
   left: 135px;
   z-index: 4;
-}
+} 
 
 .hour-hand {
   position: absolute;
-  top: 50%;
+  top: 82px;
   left: 50%;
   width: 10px;
   height: 60px;
@@ -147,33 +147,33 @@ body {
   z-index: 3;
   border-radius: 10px;
   transform: rotate(var(--deg-rotation-hourse));
-  transform-origin: top center;
+  transform-origin: bottom center;
 }
 
 .minute-hand {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 40px;
   left: 50%;
   width: 10px;
   height: 100px;
   background: greenyellow;
   border-radius: 10px;
   transform: rotate(var(--deg-rotation-minutes));
-  transform-origin: top center;
+  transform-origin: bottom center;
  
 }
 .second-hand {
   position: absolute;
   z-index: 1;
-  top: 50%;
+  top: 20px;
   left: 50%;
   width: 5px;
   height: 120px;
   background: red;
   border-radius: 10px;
   transform: rotate(var(--deg-rotation-seconds));
-  transform-origin: top center;
+  transform-origin: bottom center;
   /* josefa */
  
 }
