@@ -2,9 +2,9 @@
   --background-color: #000;
   --text-color: #fff;
   --clock-border-color: #333;
-  --deg-rotation-hourse: 30deg;
-  --deg-rotation-minutes: 90deg;
-  --deg-rotation-seconds: 120deg;
+  --deg-rotation-hourse: 180deg;
+  --deg-rotation-minutes: 180deg;
+  --deg-rotation-seconds: 180deg;
   
 }
 

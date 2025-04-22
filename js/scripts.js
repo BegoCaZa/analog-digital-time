@@ -52,13 +52,34 @@ const getClockTime = () => {
   minutesElement.textContent = addZero(date.getMinutes());
 };
 
-setInterval(() => {
-  getClockTime();
-  getClockDate();
-}, 1000);
 
 //horas
 //360° ÷ 12 horas = 30° por hora
-//360° ÷ 60 = 6° por minuto
-//6° ÷ 60 = 0.1° por segundo
+//
 
+//minutos
+//360° ÷ 60 = 6° por minuto
+// 
+// segundos
+//360° ÷ 60 = 6° por segundo
+
+const getAnalogClock = () => {
+  const date = new Date();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const hourDegrees = hours/12 * 30;
+  const minuteDegrees = minutes * 6;
+  const secondDegrees = seconds * 6;
+
+  document.documentElement.style.setProperty('--deg-rotation-hourse', `${hourDegrees}deg`);
+  document.documentElement.style.setProperty('--deg-rotation-minutes', `${minuteDegrees}deg`);
+  document.documentElement.style.setProperty('--deg-rotation-seconds', `${secondDegrees}deg`);
+};
+
+setInterval(() => {
+  getClockTime();
+  getClockDate();
+  getAnalogClock();
+}, 1000);
