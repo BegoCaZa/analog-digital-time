@@ -42,9 +42,9 @@ const getClockDate = () => {
   yearElement.textContent = year;
 };
 
-const addZero= (number) => {
-  return number < 10 ? `0${number}`: number;
-}
+const addZero = number => {
+  return number < 10 ? `0${number}` : number;
+};
 
 const getClockTime = () => {
   const date = new Date(); //coge la hora cuando la llamo, asi que hay que repetirlo
@@ -52,14 +52,13 @@ const getClockTime = () => {
   minutesElement.textContent = addZero(date.getMinutes());
 };
 
-
 //horas
 //360° ÷ 12 horas = 30° por hora
 //
 
 //minutos
 //360° ÷ 60 = 6° por minuto
-// 
+//
 // segundos
 //360° ÷ 60 = 6° por segundo
 
@@ -69,13 +68,22 @@ const getAnalogClock = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  const hourDegrees = hours * 30;
-  const minuteDegrees = minutes * 6;
+  const hourDegrees = hours * 30 + minutes / 2;
+  const minuteDegrees = minutes * 6 + seconds / 10;
   const secondDegrees = seconds * 6;
 
-  document.documentElement.style.setProperty('--deg-rotation-hourse', `${hourDegrees}deg`);
-  document.documentElement.style.setProperty('--deg-rotation-minutes', `${minuteDegrees}deg`);
-  document.documentElement.style.setProperty('--deg-rotation-seconds', `${secondDegrees}deg`);
+  document.documentElement.style.setProperty(
+    '--deg-rotation-hourse',
+    `${hourDegrees}deg`
+  );
+  document.documentElement.style.setProperty(
+    '--deg-rotation-minutes',
+    `${minuteDegrees}deg`
+  );
+  document.documentElement.style.setProperty(
+    '--deg-rotation-seconds',
+    `${secondDegrees}deg`
+  );
 };
 
 setInterval(() => {
